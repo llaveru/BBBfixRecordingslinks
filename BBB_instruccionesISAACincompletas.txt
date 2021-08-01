@@ -1,0 +1,32 @@
+INSTRUCCIONES CAMBIO LINK
+
+1.- Vamos al curso del campus VIEJO que tiene la presentacion: https://www.campusvirtual.uniovi.es/mod/bigbluebuttonbn/view.php?id=474970
+2.- La presentacion a restaurar es: https://conferenciasweb.uniovi.es/playback/presentation/2.0/playback.html?meetingId=6b0637059357aef35b75e5164f36021b811d366f-1520884490440
+3.- Del anterior link lo que me interesa es: meetingId=6b0637059357aef35b75e5164f36021b811d366f-1520884490440
+4.- En la DB del campus NUEVO hacemos la consulta:
+select *
+from mdl_bigbluebuttonbn
+where course=7113
+
+7113 se corresponde a la nueva id que tiene el curso en el campus nuevo
+
+5.- Generamos el HASH con la formula: 
+externalmettingid = meetingId-courseid-idbigbluebuttonbn
+
+--> f4cf514e9250ca7833c0d22e7f0833739c510f8f-7113-1599
+
+echo -n f4cf514e9250ca7833c0d22e7f0833739c510f8f-7113-1599 | openssl sha1 
+
+cuyo resultado nos da --> 7e2a4e65222036f82869b83392133d78244db2e2
+
+Le ponemos el mismo Timestamp que el link original quedando: 7e2a4e65222036f82869b83392133d78244db2e2-1520884490440
+
+6.- Entramos en el servidor BBB
+
+Vamos a la carpeta "/srv/bbb/var/bigbluebutton/published/presentation/"
+
+Copiamos SIN BORRAR la vieja en una nueva carpeta con el nombre del nuevo meetingID --> cp -rp 6b0637059357aef35b75e5164f36021b811d366f-1520884490440 7e2a4e65222036f82869b83392133d78244db2e2-1520884490440
+
+cp -rp 6b0637059357aef35b75e5164f36021b811d366f-1520884490440 7e2a4e65222036f82869b83392133d78244db2e2-1520884490440
+
+sed ‘s/6b0637059357aef35b75e5164f36021b811d366f-1520884490440/7e2a4e65222036f82869b83392133d78244db2e2-1520884490440/’ metadata.xml

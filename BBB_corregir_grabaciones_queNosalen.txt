@@ -1,0 +1,78 @@
+Campus viejo:
+ID del curso: https://www.campusvirtual.uniovi.es/course/view.php?id=8114
+
+https://conferenciasweb.uniovi.es/playback/presentation/2.0/playback.html?meetingId=cb1bd86f2a4e028eff202dc00447fc8412de4480-1537547273650
+meetingId=   cb1bd86f2a4e028eff202dc00447fc8412de4480-1537547273650
+
+
+CAMPUS NUEVO:
+select * from mdl_course where fullname like '%Mod I. Tema 1. Química del agua (Máster Internaci%';
+y nos dio de id 7089
+4.- En la DB del campus NUEVO hacemos la consulta:
+select *
+from mdl_bigbluebuttonbn
+where course=7089
+apuntamos el meetingid
+
+
+e99d95c606e8fb0614bd0505f11226231f7188d4
+
+componemos el external id con:
+externalmettingid = meetingId-courseid-idbigbluebuttonbn
+
+e99d95c606e8fb0614bd0505f11226231f7188d4-7089-1546
+
+echo -n e99d95c606e8fb0614bd0505f11226231f7188d4-7089-1546 | openssl sha1
+
+nos sale el HASH: 4087d396031a124c5e1bc9321fb21316eee1e92e
+
+ponemos el mismo timestamp que tenia el meetingid de la url de la grabacion
+4087d396031a124c5e1bc9321fb21316eee1e92e-1537547273650
+       
+cp -rp cb1bd86f2a4e028eff202dc00447fc8412de4480-1537547273650 4087d396031a124c5e1bc9321fb21316eee1e92e-1537547273650
+
+cd 4087d396031a124c5e1bc9321fb21316eee1e92e-1537547273650
+
+sed -i 's/cb1bd86f2a4e028eff202dc00447fc8412de4480-1537547273650/4087d396031a124c5e1bc9321fb21316eee1e92e-1537547273650/' metadata.xml
+
+_______________
+
+campus viejo:
+https://conferenciasweb.uniovi.es/playback/presentation/2.0/playback.html?meetingId=cb1bd86f2a4e028eff202dc00447fc8412de4480-1537551777650
+meetingId=cb1bd86f2a4e028eff202dc00447fc8412de4480-1537551777650
+
+Campus nuevo:
+buscamos el id del curso en el campus nuevo, lo sacamos por el fullname
+select * from mdl_course where fullname like '%Mod I. Tema 1. Química del agua (Máster Internaci%';
+nos da 7089
+
+apuntamos el meetingid que nos da la consulta:
+select meetingId from mdl_bigbluebuttonbn where course= 7089;
+e99d95c606e8fb0614bd0505f11226231f7188d4
+
+componemos el external id con:
+externalmettingid = meetingIdobtenidoconsultaanterior-courseidconsultaanterior-idbigbluebuttonbnconsultaanterior
+e99d95c606e8fb0614bd0505f11226231f7188d4-7089-1546
+
+echo -n e99d95c606e8fb0614bd0505f11226231f7188d4-7089-1546 | openssl sha1
+nos sale el HASH: 
+4087d396031a124c5e1bc9321fb21316eee1e92e
+a ese HASH hay que añadirle el timestamp que tenia el meetingid de la url de la grabacion:
+https://conferenciasweb.uniovi.es/playback/presentation/2.0/playback.html?meetingId=cb1bd86f2a4e028eff202dc00447fc8412de4480-1537551777650
+es decir
+4087d396031a124c5e1bc9321fb21316eee1e92e-1537551777650
+
+en la maquina BBB vamos a la carpeta
+/srv/bbb/var/bigbluebutton/published/presentation/
+y copiamos todo lo que hay en la carpeta original ( se saca de la url de la grabacion, el meetingId con timestamp)
+cb1bd86f2a4e028eff202dc00447fc8412de4480-1537551777650
+a el compuesto: 4087d396031a124c5e1bc9321fb21316eee1e92e-1537551777650
+
+cp -rp cb1bd86f2a4e028eff202dc00447fc8412de4480-1537551777650  4087d396031a124c5e1bc9321fb21316eee1e92e-1537551777650
+
+entramos en la carpeta nueva, la 4087d396031a124c5e1bc9321fb21316eee1e92e-1537551777650
+cd 4087d396031a124c5e1bc9321fb21316eee1e92e-1537551777650
+
+en esa carpeta
+tenemos que sustituir la cadena
+sed -i 's/cb1bd86f2a4e028eff202dc00447fc8412de4480-1537551777650/4087d396031a124c5e1bc9321fb21316eee1e92e-1537551777650/' metadata.xml
