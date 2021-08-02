@@ -1,0 +1,61 @@
+obtener datos de un XML con Python y minidom
+
+______
+<response>
+<returncode>SUCCESS</returncode>
+<recordings>
+<recording>
+<recordID>
+</recordID>
+<meetingID>f53e3b020419e5602ceded959720d51f17a0ad4a-4-293</meetingID>
+<internalMeetingID>
+</internalMeetingID>
+<name>prueba bbb</name>
+<isBreakout>false</isBreakout>
+<published>true</published>
+<state>published</state>
+<startTime>1595422470550</startTime>
+<endTime>1595423885576</endTime>
+<participants>2</participants>
+<rawSize>10347747</rawSize>
+<metadata>
+</metadata>
+<size>2333765</size>
+<playback>
+<format>
+<type>presentation</type>
+<url>
+https://conferenciasweb.uniovi.es/playback/presentation/2.0/playback.html?meetingId=ec40ba118d429a1b8b34e972550515832c563f22-1595422470550
+</url>
+<processingTime>272650</processingTime>
+<length>2</length>
+<size>2333765</size>
+</format>
+</playback>
+<data/>
+</recording>
+<recording>
+</recording>
+<recording>
+</recording>
+<recording>
+</recording>
+<recording>
+</recording>
+</recordings>
+</response>
+____________________
+
+
+
+from xml.dom import minidom
+
+doc= minidom.parse("metadatos.xml")
+name = doc.getElementsByTagName("recording")[0].getElementsByTagName("name")[0]
+print (name.firstChild.data)
+
+
+
+
+
+
