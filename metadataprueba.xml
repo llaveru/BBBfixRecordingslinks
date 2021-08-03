@@ -1,0 +1,38 @@
+<recording>
+  <id>ffd00a7c0c0cf4d9459940bff416ffcb240ea458-1538344308980</id>
+  <state>published</state>
+  <published>true</published>
+  <start_time>1538344308980</start_time>
+  <end_time>1538346983555</end_time>
+  <participants>1</participants>
+  <meeting id="ffd00a7c0c0cf4d9459940bff416ffcb240ea458-1538344308980" externalId="5e58628782306a617e90a85ea0217c4f70caccc6-7394$
+  <meta>
+    <bbb-recording-tags/>
+    <meetingId>5e58628782306a617e90a85ea0217c4f70caccc6-7394-1319</meetingId>
+    <bbb-origin-version>3.0.3+ (Build: 20160331)</bbb-origin-version>
+    <bbb-origin-tag>moodle-mod_bigbluebuttonbn (2015080611)</bbb-origin-tag>
+    <bbb-recording-name>03.- Dise&#xF1;o de Estaci&#xF3;n de Bombeo</bbb-recording-name>
+    <bbb-origin-server-common-name/>
+    <bbb-origin-server-name>antiguo-campusv.innova.uniovi.es</bbb-origin-server-name>
+    <meetingName>03.- Dise&#xF1;o de Estaci&#xF3;n de Bombeo</meetingName>
+    <bn-origin>Moodle</bn-origin>
+    <isBreakout>false</isBreakout>
+    <bbb-context>b. Aspectos B&#xE1;sicos (M&#xE1;ster Internacional en Operaci&#xF3;n y Mantenimiento de Plantas de Tratamiento$
+    <bbb-recording-description/>
+  </meta>
+  <playback>
+    <format>presentation</format>
+    <link>https://conferenciasweb.uniovi.es/playback/presentation/2.0/playback.html?meetingId=ffd00a7c0c0cf4d9459940bff416ffcb24$
+    <processing_time>599229</processing_time>
+    <duration>2413963</duration>
+    <extensions>
+      <preview>
+        <images>
+          <image width="176" height="136" alt="HIDR&#xC1;ULICA (II)">https://conferenciasweb.uniovi.es/presentation/ffd00a7c0c0c$
+          <image width="176" height="136" alt="INTRODUCCI&#xD3;N">https://conferenciasweb.uniovi.es/presentation/ffd00a7c0c0cf4d$
+          <image width="176" height="136" alt="ESTACIONES DE BOMBEO">https://conferenciasweb.uniovi.es/presentation/ffd00a7c0c0c$
+        </images>
+      </preview>
+    </extensions>
+  </playback>
+</recording>

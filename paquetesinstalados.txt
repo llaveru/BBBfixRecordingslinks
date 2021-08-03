@@ -1,0 +1,11 @@
+Para poder trabajar con postgresql se instalaron unoa paquetes
+se hizo un sudo apt get update primero
+y luego
+sudo apt-get install libpq-dev python3.8-dev
+
+puede ser necesario instalar otros paquetes basicos
+despues se pueden usar dos librerias
+pip install psycopg2
+o 
+pip install pygresql
+
