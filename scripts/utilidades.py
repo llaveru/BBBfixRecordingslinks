@@ -6,6 +6,8 @@ import subprocess
 
 from xml.dom import minidom  #para trabajar con xml
 
+import hashlib #para trabajo con sha
+
 #sustituye una cadena en un fichero por otra nueva
 def sustituir(fichero,cadenavieja,cadenanueva):
     subprocess.call(["sed", "-i",'s/'+cadenavieja+'/'+cadenanueva+'/g',fichero])
@@ -51,3 +53,10 @@ def nuevoStartTime(fichero,startTimeNuevo):
 #ejemplo modificar valor file.getElementsByTagName( "age" )[ 0 ].childNodes[ 0 ].nodeValue = "29"        #
 
 
+
+#def obtenerXML(meetingID):
+ 
+
+def obtenerSHA1(cadena):
+    hash_obj = hashlib.sha1(cadena.encode())
+    print (hash_obj.hexdigest())

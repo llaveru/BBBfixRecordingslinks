@@ -1,8 +1,12 @@
-<?xml version="1.0" ?><recordings>
-
-   <recording>
-    <startTime>1590123100</startTime>
-    <endTime>1590123163</endTime>   
-   </recording>
-
-</recordings>
+<response>
+          <returncode>SUCCESS</returncode>
+          <recordings><recording><recordID>b0ee1c0276bc0add1f515c5e384d46937f55dad2-1538344308980</recordID><meetingID>5e58628782306a617e90a85ea0217c4f70caccc6-7394-1319</meetingID><internalMeetingID>b0ee1c0276bc0add1f515c5e384d46937f55dad2-1538344308980</internalMeetingID><name>03.- Diseño de Estación de Bombeo</name><isBreakout>false</isBreakout><published>true</published><state>published</state><startTime>1538344308980</startTime><endTime>1538346983555</endTime><participants>1</participants><rawSize>0</rawSize><metadata><bn-origin>Moodle</bn-origin><bbb-origin-tag>moodle-mod_bigbluebuttonbn (2015080611)</bbb-origin-tag><bbb-recording-tags/><bbb-origin-server-common-name/><bbb-origin-version>3.0.3+ (Build: 20160331)</bbb-origin-version><bbb-recording-name>03.- Diseño de Estación de Bombeo</bbb-recording-name><bbb-context>b. Aspectos Básicos (Máster Internacional en Operación y Mantenimiento de Plantas de Tratamiento de Aguas)</bbb-context><meetingName>03.- Diseño de Estación de Bombeo</meetingName><meetingId>5e58628782306a617e90a85ea0217c4f70caccc6-7394-1319</meetingId><bbb-recording-description/><isBreakout>false</isBreakout><bbb-origin-server-name>antiguo-campusv.innova.uniovi.es</bbb-origin-server-name></metadata><size>0</size><playback><format><type>presentation</type><url>https://conferenciasweb.uniovi.es/playback/presentation/2.0/playback.html?meetingId=b0ee1c0276bc0add1f515c5e384d46937f55dad2-1538344308980</url><processingTime>599229</processingTime><length>40</length><size>0</size>
+      <preview>
+        <images>
+          <image alt="HIDRÁULICA (II)" height="136" width="176">https://conferenciasweb.uniovi.es/presentation/b0ee1c0276bc0add1f515c5e384d46937f55dad2-1538344308980/presentation/337135dc4c66f1f82d6b3909f55e1c4566ccfca3-1538344354636/thumbnails/thumb-1.png</image>
+          <image alt="INTRODUCCIÓN" height="136" width="176">https://conferenciasweb.uniovi.es/presentation/b0ee1c0276bc0add1f515c5e384d46937f55dad2-1538344308980/presentation/337135dc4c66f1f82d6b3909f55e1c4566ccfca3-1538344354636/thumbnails/thumb-2.png</image>
+          <image alt="ESTACIONES DE BOMBEO" height="136" width="176">https://conferenciasweb.uniovi.es/presentation/b0ee1c0276bc0add1f515c5e384d46937f55dad2-1538344308980/presentation/337135dc4c66f1f82d6b3909f55e1c4566ccfca3-1538344354636/thumbnails/thumb-3.png</image>
+        </images>
+      </preview>
+    </format></playback><data></data></recording></recordings>
+        </response>
