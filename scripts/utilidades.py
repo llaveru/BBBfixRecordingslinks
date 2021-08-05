@@ -13,6 +13,19 @@ def sustituir(fichero,cadenavieja,cadenanueva):
     subprocess.call(["sed", "-i",'s/'+cadenavieja+'/'+cadenanueva+'/g',fichero])
 
 
+
+#sacar un listado con las grabaciones de un fichero xml
+def sacarGrabaciones(fichero):
+    doc=minidom.parse(fichero)
+    grabaciones=doc.getElementsByTagName('recording')
+
+    for grabacion in grabaciones:
+        meetingIDunico= grabacion.getElementsByTagName('recordID')[0]
+        playbackurl= "https://conferenciasweb.uniovi.es/playback/presentation/2.0/playback.html?meetingId="+meetingIDunico.childNodes[0].data
+        print(meetingIDunico.childNodes[0].data)
+        print(playbackurl)
+
+
 #Sustituye el startTime de un recording por uno nuevo  1-10-2021
 #calcula el nuevo endTime equivalente
 def nuevoStartTime(fichero,startTimeNuevo):
@@ -59,4 +72,5 @@ def nuevoStartTime(fichero,startTimeNuevo):
 
 def obtenerSHA1(cadena):
     hash_obj = hashlib.sha1(cadena.encode())
-    print (hash_obj.hexdigest())
+    # print (hash_obj.hexdigest())
+    return hash_obj.hexdigest()
